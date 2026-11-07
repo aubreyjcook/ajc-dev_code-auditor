@@ -1,0 +1,50 @@
+{
+  "$comment": "Copy to auditor.config.json. Every field is optional; CLI flags override these values, and these override environment variables.",
+
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite",
+    "fallbackProviders": ["groq", "openrouter", "ollama"],
+    "requestsPerMinute": null,
+    "maxOutputTokens": 4096,
+    "temperature": 0.1
+  },
+
+  "analysis": {
+    "categories": [
+      "security",
+      "quality",
+      "performance",
+      "accessibility",
+      "architecture",
+      "technology",
+      "ownership"
+    ],
+    "customRulesFile": null,
+    "chunkTokenBudget": 24000,
+    "concurrency": 1,
+    "synthesize": true
+  },
+
+  "code": {
+    "maxFiles": 400,
+    "maxFileBytes": 200000,
+    "include": [],
+    "exclude": []
+  },
+
+  "web": {
+    "maxPages": 10,
+    "maxDepth": 2,
+    "timeoutMs": 30000,
+    "runAxe": true,
+    "userAgent": "ajc-dev-code-auditor/0.1 (+https://github.com/ajc-dev)"
+  },
+
+  "output": {
+    "dir": "./audit-output",
+    "formats": ["markdown", "json"]
+  },
+
+  "logLevel": "info"
+}

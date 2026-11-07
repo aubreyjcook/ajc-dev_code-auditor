@@ -1,0 +1,6 @@
+allowBuilds:
+  esbuild: set this to true or false
+# pnpm >= 10 blocks dependency postinstall scripts unless allow-listed here.
+# esbuild (used by tsx and vitest) needs its install script to verify its binary.
+onlyBuiltDependencies:
+  - esbuild

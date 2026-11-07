@@ -1,0 +1,50 @@
+{
+  "name": "ajc-dev-code-auditor",
+  "version": "0.1.0",
+  "description": "LLM-powered auditor for codebases and live websites. Produces Markdown + JSON reports covering security, quality, performance, accessibility, architecture, technology, and ownership.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "bin": {
+    "audit": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "docs"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "dev": "tsx src/cli.ts",
+    "audit": "tsx src/cli.ts",
+    "audit:code": "tsx src/cli.ts code",
+    "audit:web": "tsx src/cli.ts web",
+    "audit:providers": "tsx src/cli.ts providers",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "playwright:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "commander": "^15.0.0",
+    "dotenv": "^18.0.9",
+    "fast-glob": "^3.3.3",
+    "ignore": "^7.0.14",
+    "p-limit": "^7.3.3",
+    "picocolors": "^1.1.1",
+    "playwright": "^1.65.0",
+    "simple-git": "^4.0.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  }
+}

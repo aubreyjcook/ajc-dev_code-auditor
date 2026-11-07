@@ -147,3 +147,11 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# ajc-dev_code-auditor
+audit-output/
+auditor.config.json
+.env
+.env.local
+dist/
+test-results/

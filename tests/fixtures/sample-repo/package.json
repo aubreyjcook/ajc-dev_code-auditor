@@ -1,0 +1,22 @@
+{
+  "name": "@acme/sample-service",
+  "version": "1.2.3",
+  "description": "Fixture project used by the auditor test-suite.",
+  "author": "Jane Doe <jane@acme.example>",
+  "maintainers": [{ "name": "Ops Team", "email": "ops@acme.example" }],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/acme/sample-service.git" },
+  "homepage": "https://acme.example",
+  "engines": { "node": ">=18" },
+  "type": "module",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.0",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
